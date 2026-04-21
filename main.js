@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const translations = {
         pt: {
-            "head-title": "Vitro Nery | Portfólio Digital",
+            "head-title": "Vitor Nery | Portfólio Digital",
             "head-desc": "Engenheiro de Software apaixonado por criar soluções inovadoras e participar da comunidade tech.",
             "profile-title": "Engenheiro de Software | Entusiasta de Comunidade Tech",
             "status-text": "Disponível para oportunidades",
@@ -24,10 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
             "link-gh-sub": "Meus projetos e contribuições",
             "link-wa-sub": "Entre em contato direto",
             "link-tt-sub": "Siga-me no TikTok",
-            "footer-text": "© 2026 Vitro Nery. Todos os direitos reservados."
+            "footer-text": "© 2026 Vitor Nery. Todos os direitos reservados."
         },
         en: {
-            "head-title": "Vitro Nery | Digital Portfolio",
+            "head-title": "Vitor Nery | Digital Portfolio",
             "head-desc": "Software Engineer passionate about creating innovative solutions and participating in the tech community.",
             "profile-title": "Software Engineer | Tech Enthusiast",
             "status-text": "Available for opportunities",
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "link-gh-sub": "My projects and contributions",
             "link-wa-sub": "Contact me directly",
             "link-tt-sub": "Follow me on TikTok",
-            "footer-text": "© 2026 Vitro Nery. All rights reserved."
+            "footer-text": "© 2026 Vitor Nery. All rights reserved."
         }
     };
 
