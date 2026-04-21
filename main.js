@@ -77,21 +77,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Premium Animations (Point 2) ---
 
-    // Initial Staggered reveal
-    const animatedElements = document.querySelectorAll('.lang-bar, .avatar-section, .section, .divider, .card');
-    
-    animatedElements.forEach((el, index) => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px) scale(0.98)';
-        el.style.filter = 'blur(10px)';
-        el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+    // --- Preloader & Entrance Animation ---
+    window.addEventListener('load', () => {
+        const preloader = document.getElementById('preloader');
         
+        // Give a tiny extra delay for a smoother feel
         setTimeout(() => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0) scale(1)';
-            el.style.filter = 'blur(0)';
-        }, 100 + (index * 60));
+            preloader.classList.add('fade-out');
+            page.classList.add('visible');
+            
+            // Start staggered reveal only after preloader starts fading
+            startEntranceAnimations();
+        }, 1200);
     });
+
+    function startEntranceAnimations() {
+        const animatedElements = document.querySelectorAll('.lang-bar, .avatar-section, .section, .divider, .card');
+        
+        animatedElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px) scale(0.98)';
+            el.style.filter = 'blur(10px)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0) scale(1)';
+                el.style.filter = 'blur(0)';
+            }, 100 + (index * 60));
+        });
+    }
 
     // Hover glow effect that follows the cursor on cards
     const linkCards = document.querySelectorAll('.link-card');

@@ -11,6 +11,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
 </head>
 <body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="candle">
+                <svg viewBox="0 0 100 100" class="candle-svg">
+                    <!-- Wax body -->
+                    <rect x="35" y="45" width="30" height="40" rx="3" fill="var(--bg-mesh-2)" stroke="var(--blue-dim)" stroke-width="1"/>
+                    <!-- Wick -->
+                    <line x1="50" y1="40" x2="50" y2="45" stroke="var(--muted)" stroke-width="2"/>
+                    <!-- Flame -->
+                    <path class="flame" d="M50,15 C55,25 58,32 50,40 C42,32 45,25 50,15 Z" fill="var(--blue-bright)"/>
+                </svg>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
     <div class="mesh-bg"></div>
     <div class="cursor-glow"></div>
     <div class="page">
