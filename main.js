@@ -17,6 +17,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="bio-highlight">design responsivo</span> e
                 <span class="bio-highlight">experiência do usuário</span>,
                 contribuo para projetos que fazem diferença.`,
+            "divider-projects": "Projetos",
+            "link-projects-title": "MEUS PROJETOS",
+            "link-projects-sub": "Explore meus trabalhos e portfólio completo",
+            "projects-head-title": "Meus Projetos | Vitor Nery",
+            "projects-head-desc": "Portfólio de projetos e aplicações desenvolvidas por Vitor Nery.",
+            "back-btn": "← Voltar",
+            "projects-h1": "Meus <span>Projetos</span>",
+            "projects-sub-desc": "Projetos em destaque, código-fonte e soluções desenvolvidas.",
+            "p1-title": "Sistema de Agendamento Tech",
+            "p1-desc": "Plataforma moderna para gerenciamento e agendamento de recursos com interface responsiva e controle de permissões.",
+            "p2-title": "Scraper de Preços Automático",
+            "p2-desc": "Ferramenta em Python para monitoramento e comparação de preços de produtos com extração automática de dados.",
+            "p3-title": "Auto Organizador de Arquivos",
+            "p3-desc": "Script inteligente de organização de arquivos por categorias com API e interface gráfica integradas.",
+            "p4-title": "Link-in-Bio Blue Edition",
+            "p4-desc": "Interface Link-in-Bio de alta performance com animações de mesh gradient, glassmorphism 2.0 e i18n.",
+            "p-btn-code": "Ver Código ↗",
+            "p-btn-demo": "Ver Demo ↗",
             "divider-contact": "Contato",
             "link-email-title": "ENVIAR EMAIL",
             "divider-networks": "Redes Profissionais",
@@ -36,6 +54,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <span class="bio-highlight">responsive design</span> and 
                 <span class="bio-highlight">user experience</span>, 
                 I contribute to projects that make a difference.`,
+            "divider-projects": "Projects",
+            "link-projects-title": "MY PROJECTS",
+            "link-projects-sub": "Explore my work and full portfolio",
+            "projects-head-title": "My Projects | Vitor Nery",
+            "projects-head-desc": "Portfolio of projects and applications built by Vitor Nery.",
+            "back-btn": "← Back",
+            "projects-h1": "My <span>Projects</span>",
+            "projects-sub-desc": "Featured projects, source code and built solutions.",
+            "p1-title": "Tech Scheduling System",
+            "p1-desc": "Modern platform for resource management and scheduling with responsive interface and role-based access.",
+            "p2-title": "Automated Price Scraper",
+            "p2-desc": "Python tool for product price monitoring and comparison with automated data extraction.",
+            "p3-title": "Auto File Organizer",
+            "p3-desc": "Smart script for file categorization and organization with integrated API and web interface.",
+            "p4-title": "Link-in-Bio Blue Edition",
+            "p4-desc": "High-performance Link-in-Bio interface featuring dynamic mesh gradient, glassmorphism 2.0 and i18n.",
+            "p-btn-code": "View Code ↗",
+            "p-btn-demo": "View Demo ↗",
             "divider-contact": "Contact",
             "link-email-title": "SEND EMAIL",
             "divider-networks": "Professional Networks",
@@ -92,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function startEntranceAnimations() {
-        const animatedElements = document.querySelectorAll('.lang-bar, .avatar-section, .section, .divider, .card');
+        const animatedElements = document.querySelectorAll('.lang-bar, .avatar-section, .section, .divider, .card, .projects-header, .projects-title-section');
         
         animatedElements.forEach((el, index) => {
             el.style.opacity = '0';

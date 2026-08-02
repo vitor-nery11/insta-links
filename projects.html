@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title data-i18n="projects-head-title">Meus Projetos | Vitor Nery</title>
+    <meta name="description" data-i18n="projects-head-desc" content="Portfólio de projetos e aplicações desenvolvidas por Vitor Nery.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <style>
+        .projects-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            border-radius: 14px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+            text-decoration: none;
+            background: var(--card);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+        }
+        .back-btn:hover {
+            border-color: var(--blue-bright);
+            background: var(--blue-dim);
+            color: var(--blue-bright);
+            transform: translateX(-4px);
+        }
+        .projects-title-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .projects-h1 {
+            font-size: 32px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 8px;
+        }
+        .projects-h1 span {
+            color: var(--blue-bright);
+            background: linear-gradient(to bottom right, #ffffff, var(--blue-bright));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .projects-sub {
+            color: var(--muted);
+            font-size: 15px;
+        }
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            position: relative;
+        }
+        .project-header-row {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 12px;
+        }
+        .project-icon-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+        .project-title-text {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--text);
+        }
+        .project-desc {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--muted);
+        }
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 4px;
+        }
+        .tag {
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(59, 130, 246, 0.1);
+            color: var(--blue-bright);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            letter-spacing: 0.03em;
+        }
+        .project-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 8px;
+        }
+        .project-link-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--blue-bright);
+            text-decoration: none;
+            padding: 6px 14px;
+            border-radius: 10px;
+            background: var(--blue-dim);
+            border: 1px solid rgba(96, 165, 250, 0.2);
+            transition: var(--transition);
+        }
+        .project-link-btn:hover {
+            background: var(--blue);
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="candle">
+                <svg viewBox="0 0 100 100" class="candle-svg">
+                    <rect x="35" y="45" width="30" height="40" rx="3" fill="var(--bg-mesh-2)" stroke="var(--blue-dim)" stroke-width="1"/>
+                    <line x1="50" y1="40" x2="50" y2="45" stroke="var(--muted)" stroke-width="2"/>
+                    <path class="flame" d="M50,15 C55,25 58,32 50,40 C42,32 45,25 50,15 Z" fill="var(--blue-bright)"/>
+                </svg>
+            </div>
+            <div class="loader-bar-container">
+                <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+    <div class="mesh-bg"></div>
+    <div class="cursor-glow"></div>
+
+    <div class="page">
+        <!-- Top bar -->
+        <div class="projects-header">
+            <a href="index.html" class="back-btn" data-i18n="back-btn">
+                ← Voltar
+            </a>
+            <!-- Language toggle -->
+            <div class="lang-bar" style="padding: 0;">
+                <button class="lang-btn" id="lang-en">
+                    <span class="flag">🇺🇸</span> EN
+                </button>
+                <button class="lang-btn active" id="lang-pt">
+                    <span class="flag">🇧🇷</span> PT
+                </button>
+            </div>
+        </div>
+
+        <!-- Title -->
+        <div class="projects-title-section">
+            <h1 class="projects-h1" data-i18n="projects-h1">Meus <span>Projetos</span></h1>
+            <p class="projects-sub" data-i18n="projects-sub-desc">Projetos em destaque, código-fonte e soluções desenvolvidas.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="section">
+
+            <!-- Project 1 -->
+            <div class="card project-card">
+                <div class="project-header-row">
+                    <div class="project-icon-title">
+                        <div class="link-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <div class="project-title-text" data-i18n="p1-title">Sistema de Agendamento Tech</div>
+                    </div>
+                </div>
+                <p class="project-desc" data-i18n="p1-desc">Plataforma moderna para gerenciamento e agendamento de recursos com interface responsiva e controle de permissões.</p>
+                <div class="project-tags">
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">HTML5 / CSS3</span>
+                    <span class="tag">UI/UX</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/vitor-nery11" target="_blank" class="project-link-btn" data-i18n="p-btn-code">
+                        Ver Código ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="card project-card">
+                <div class="project-header-row">
+                    <div class="project-icon-title">
+                        <div class="link-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-title-text" data-i18n="p2-title">Scraper de Preços Automático</div>
+                    </div>
+                </div>
+                <p class="project-desc" data-i18n="p2-desc">Ferramenta em Python para monitoramento e comparação de preços de produtos com extração automática de dados.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Web Scraping</span>
+                    <span class="tag">Automação</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/vitor-nery11" target="_blank" class="project-link-btn" data-i18n="p-btn-code">
+                        Ver Código ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="card project-card">
+                <div class="project-header-row">
+                    <div class="project-icon-title">
+                        <div class="link-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="project-title-text" data-i18n="p3-title">Auto Organizador de Arquivos</div>
+                    </div>
+                </div>
+                <p class="project-desc" data-i18n="p3-desc">Script inteligente de organização de arquivos por categorias com API e interface gráfica integradas.</p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">FastAPI</span>
+                    <span class="tag">Frontend Vanilla</span>
+                </div>
+                <div class="project-actions">
+                    <a href="https://github.com/vitor-nery11" target="_blank" class="project-link-btn" data-i18n="p-btn-code">
+                        Ver Código ↗
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="card project-card">
+                <div class="project-header-row">
+                    <div class="project-icon-title">
+                        <div class="link-icon">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="project-title-text" data-i18n="p4-title">Link-in-Bio Blue Edition</div>
+                    </div>
+                </div>
+                <p class="project-desc" data-i18n="p4-desc">Interface Link-in-Bio de alta performance com animações de mesh gradient, glassmorphism 2.0 e i18n.</p>
+                <div class="project-tags">
+                    <span class="tag">HTML5 / CSS3</span>
+                    <span class="tag">Vanilla JS</span>
+                    <span class="tag">Glassmorphism 2.0</span>
+                </div>
+                <div class="project-actions">
+                    <a href="index.html" class="project-link-btn" data-i18n="p-btn-demo">
+                        Ver Demo ↗
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <span data-i18n="footer-text">© 2026 Vitor Nery. Todos os direitos reservados.</span>
+        </footer>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

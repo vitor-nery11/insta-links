@@ -392,6 +392,25 @@ body::before {
     transition: all 0.1s;
 }
 
+/* ── Featured Card ── */
+.featured-card {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(20, 20, 25, 0.7));
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.15);
+}
+
+.featured-card .link-icon {
+    background: var(--blue-dim);
+    border-color: rgba(96, 165, 250, 0.3);
+    color: var(--blue-bright);
+    box-shadow: 0 0 15px var(--blue-glow);
+}
+
+.featured-card:hover {
+    border-color: var(--blue-bright);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);
+}
+
 .link-icon {
     width: 48px; 
     height: 48px;
